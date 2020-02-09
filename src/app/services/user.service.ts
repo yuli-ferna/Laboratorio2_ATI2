@@ -16,7 +16,20 @@ export class UserService {
         this.users = fs.collection('users').valueChanges();
     }
 
-    getUsers(){
+    getHeros(){
         return this.users;
     }
+
+    addHeros(hero :userInterface){
+        console.log("saiko no hero"); 
+    }
+    
+    deleteHeros(){
+        console.log("saiko no hero"); 
+    }
+    
+    updateHeros(hero :userInterface){
+        console.log("saiko no hero"); 
+    }
+    
 }

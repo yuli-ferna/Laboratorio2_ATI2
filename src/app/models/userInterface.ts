@@ -1,9 +1,9 @@
 export interface userInterface{
     name?: string;
-    lastName?: string;
+    alterEgo?: string;
     email?: string;
     phone?: string;
     birthday?: any;
-    favNumber?: number;
-    favWord?: string;
+    listPos?: number;
+    heroPhrase?: string;
 }
