@@ -1,0 +1,18 @@
+{
+    "Navbar" : {
+        "Add": "Add",
+        "Delete": "Delete",
+        "Edit": "Edit"
+    },
+    "AddUser" : {
+        "Title" : "Add Hero",
+        "Name": "Name",
+        "AlterEgo": "AlterEgo",
+        "Email": "Email",
+        "Phone": "Phone",
+        "ListPos": "ListPos",
+        "Birthday": "Birthday",
+        "BattleCry": "BattleCry",
+        "Submit": "Submit"
+    }
+}

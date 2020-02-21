@@ -1,0 +1,20 @@
+
+{
+    "Navbar" : {
+        "Add": "Agregar",
+        "Delete": "Eliminar",
+        "Edit": "Editar"
+    },
+
+    "AddUser" : {
+        "Title" : "Añadir Heroe",
+        "Name": "Nombre",
+        "AlterEgo": "Alias",
+        "Email": "Email",
+        "Phone": "Numero de Telefono",
+        "ListPos": "Posicion en la Lista",
+        "Birthday": "Cumpleaños",
+        "BattleCry": "Grito de Batalla",
+        "Submit": "Aceptar"
+    }
+}
