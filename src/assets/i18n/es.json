@@ -3,7 +3,10 @@
     "Navbar" : {
         "Add": "Agregar",
         "Delete": "Eliminar",
-        "Edit": "Editar"
+        "Edit": "Editar",
+        "Spanish" : "Español",
+        "English" : "Ingles",
+        "Languages" : "Idiomas"
     },
 
     "AddUser" : {

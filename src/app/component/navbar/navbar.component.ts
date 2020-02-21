@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public translate: TranslateService) { 
+
+    this.translate.addLangs(['es','en']);
+    this.translate.setDefaultLang('en');
+
+  }
 
   ngOnInit() {
+
+    let _this = this;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      let elems = document.querySelectorAll('.dropdown-trigger');
+      let instances = M.Dropdown.init(elems);
+    });
+    
+    document.getElementById('SpainLang').addEventListener('click', function(){
+
+      _this.translate.use('es')
+
+    });
+
+    document.getElementById('EnglishLang').addEventListener('click', function(){
+
+      _this.translate.use('en')
+
+    });
   }
 
 }

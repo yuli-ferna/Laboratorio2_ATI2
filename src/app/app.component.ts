@@ -7,11 +7,10 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'lab2';
-  constructor ( public translate: TranslateService){
 
-    this.translate.addLangs(['es','en']);
-    this.translate.setDefaultLang('es');
-
+  constructor (){
   }
+
 }

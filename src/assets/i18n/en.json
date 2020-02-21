@@ -2,8 +2,12 @@
     "Navbar" : {
         "Add": "Add",
         "Delete": "Delete",
-        "Edit": "Edit"
+        "Edit": "Edit",
+        "Spanish" : "Spanish",
+        "English" : "English",
+        "Languages" : "Languages"
     },
+    
     "AddUser" : {
         "Title" : "Add Hero",
         "Name": "Name",
