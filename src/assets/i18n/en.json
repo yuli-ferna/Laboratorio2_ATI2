@@ -19,7 +19,10 @@
         "Birthday": "Birthday",
         "BattleCry": "BattleCry",
         "Submit": "Submit",
-        "isRequired": "is required"
+        "isRequired": "is required",
+        "emailValid": "Email must be a valid email address",
+        "isInvalid": "is invalid",
+        "form": "The form"
     },
     "users" : {
         "notUser" : "No heroes registered",

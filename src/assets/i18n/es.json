@@ -21,7 +21,13 @@
         "BattleCry": "Grito de Batalla",
         "Submit": "Aceptar",
         "isRequired": "es requerido/a",
-        "noNumber": "No debe tener números"
+        "noNumber": "No debe tener números",
+        "emailValid": "El email debe ser válido",
+        "isInvalid": "es inválido",
+        "form": "El formulario"
+
+
+
     },
     "users" : {
         "notUser" : "No hay héroes registrados",

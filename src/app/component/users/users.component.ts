@@ -32,15 +32,20 @@ export class UsersComponent implements OnInit {
   }
   updateHero(form: NgForm, user)
   {
-    console.log(user);
-    
-    this.userService.updateHeros(user, user.id).then(()=>{
-      console.log('Hero updated!');
+    if (form.valid) {
+      console.log(user);
       
-    }).catch((err)=>{
-      console.log(err);
+      this.userService.updateHeros(user, user.id).then(()=>{
+        console.log('Hero updated!');
+        this.editMode = false;
+      }).catch((err)=>{
+        console.log(err);
+        
+      });
+    } else {
+      console.log('No se puede');
       
-    });
+    }
   }
 
   editModeOn(event, user){
