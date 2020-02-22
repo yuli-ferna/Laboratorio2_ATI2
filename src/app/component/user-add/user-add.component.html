@@ -3,37 +3,37 @@
         <p class="card-title">{{"AddUser.Title" | translate}}</p>
    
             <form (ngSubmit)="saveHero(formHero)" #formHero="ngForm" class="col s6">
-              <div class="form-group input-field">
+              <div class="form-group">
                 <label for="name">{{"AddUser.Name" | translate}}</label>
                 <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="user.name" id="name" required>
               </div>
         
-              <div class="form-group input-field">
+              <div class="form-group">
                 <label for="alterEgo">{{"AddUser.AlterEgo" | translate}}</label>
                 <input type="text" class="form-control" name="alterEgo" #alterEgo="ngModel" [(ngModel)]="user.alterEgo" id="alterEgo">
               </div>
 
-              <div class="form-group input-field">
+              <div class="form-group">
                 <label for="alterEgo">{{"AddUser.Email" | translate}}</label>
                 <input type="email" class="form-control" name="email" #email="ngModel" [(ngModel)]="user.email" id="email">
               </div>
 
-              <div class="form-group input-field">
+              <div class="form-group">
                 <label for="alterEgo">{{"AddUser.Phone" | translate}}</label>
                 <input type="text" class="form-control" name="phone" #phone="ngModel" [(ngModel)]="user.phone" id="phone">
               </div>
 
-              <div class="form-group input-field">
+              <div class="form-group">
                 <label for="alterEgo">{{"AddUser.ListPos" | translate}}</label>
                 <input type="number" class="form-control" name="listPos" #listPos="ngModel" [(ngModel)]="user.listPos" id="listPos">
               </div>
 
-              <div class="form-group input-field">
+              <div class="form-group">
                 <label for="alterEgo">{{"AddUser.Birthday" | translate}}</label>
                 <input type="date" class="form-control" name="birthday" #birthday="ngModel" [(ngModel)]="user.birthday" id="birthday">
               </div>
 
-              <div class="form-group input-field">
+              <div class="form-group">
                 <label for="alterEgo">{{"AddUser.BattleCry" | translate}}</label>
                 <input type="text" class="form-control" name="heroPhrase" #heroPhrase="ngModel" [(ngModel)]="user.heroPhrase" id="heroPhrase">
               </div>

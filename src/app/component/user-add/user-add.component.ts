@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { userInterface } from 'src/app/models/userInterface';
+
 import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user-add',
@@ -18,13 +20,31 @@ export class UserAddComponent implements OnInit {
     listPos: 0,
     heroPhrase:''
   }
-  constructor() { }
+  constructor(private userServ : UserService) { 
+    
+    let a =userServ.getHeros();
+  }
 
   ngOnInit() {
   }
 
   saveHero(form: NgForm){
-
+      console.log(this.user);
+      this.userServ.addHeros(this.user).then(()=>{
+        console.log('ready!');
+        this.user = {
+          name: '',
+          alterEgo: '',
+          email: '',
+          phone: '',
+          birthday: '',
+          listPos: 0,
+          heroPhrase:''
+        };
+      }).catch((err)=>{
+        console.log(err);
+        
+      })
   }
 
 }

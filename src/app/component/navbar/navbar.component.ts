@@ -21,7 +21,8 @@ export class NavbarComponent implements OnInit {
 
     document.addEventListener('DOMContentLoaded', function() {
       let elems = document.querySelectorAll('.dropdown-trigger');
-      let instances = M.Dropdown.init(elems);
+      var option={}
+      // let instances = M.Dropdown.init(elems, option);
     });
     
     document.getElementById('SpainLang').addEventListener('click', function(){

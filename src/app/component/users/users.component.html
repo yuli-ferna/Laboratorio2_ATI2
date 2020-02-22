@@ -1,3 +1,65 @@
-<p>
-  users works!
-</p>
+<div id="list" *ngIf="users?.length > 0; else noHeros">
+  <!-- <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr> -->
+  <!-- <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr> -->
+  <ul class="collection with-header">
+    <li class="collection-header"><h4>{{"users.Hero" | translate}}</h4></li>
+    <li *ngFor="let user of users" class="collection-item avatar">
+      <div>
+        {{user.name}} <br>
+        {{user.alterEgo}}
+        <a href="#!" class="secondary-content">
+          <i *ngIf="!editMode" (click)="editModeOn($event, user)" class="material-icons">edit</i>
+          <i *ngIf="editMode && currentEditId == user.id" (click)="editModeOff($event, user)" class="material-icons">close</i>
+          <i *ngIf="!editMode" (click)="deleteHero($event, user)" class="material-icons">delete</i>
+        </a>
+      </div>
+      <!-- Edit Form -->
+      <div *ngIf="editMode && currentEditId == user.id">
+        <form (ngSubmit)="updateHero(formHero, user)" #formHero="ngForm" class="col s6">
+          <div class="form-group">
+            <label for="name">{{"AddUser.Name" | translate}}</label>
+            <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="user.name" id="name" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="alterEgo">{{"AddUser.AlterEgo" | translate}}</label>
+            <input type="text" class="form-control" name="alterEgo" #alterEgo="ngModel" [(ngModel)]="user.alterEgo" id="alterEgo">
+          </div>
+
+          <div class="form-group">
+            <label for="alterEgo">{{"AddUser.Email" | translate}}</label>
+            <input type="email" class="form-control" name="email" #email="ngModel" [(ngModel)]="user.email" id="email">
+          </div>
+
+          <div class="form-group">
+            <label for="alterEgo">{{"AddUser.Phone" | translate}}</label>
+            <input type="text" class="form-control" name="phone" #phone="ngModel" [(ngModel)]="user.phone" id="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="alterEgo">{{"AddUser.ListPos" | translate}}</label>
+            <input type="number" class="form-control" name="listPos" #listPos="ngModel" [(ngModel)]="user.listPos" id="listPos">
+          </div>
+
+          <div class="form-group">
+            <label for="alterEgo">{{"AddUser.Birthday" | translate}}</label>
+            <input type="date" class="form-control" name="birthday" #birthday="ngModel" [(ngModel)]="user.birthday" id="birthday">
+          </div>
+
+          <div class="form-group">
+            <label for="alterEgo">{{"AddUser.BattleCry" | translate}}</label>
+            <input type="text" class="form-control" name="heroPhrase" #heroPhrase="ngModel" [(ngModel)]="user.heroPhrase" id="heroPhrase">
+          </div>
+          <br><br>
+          <button type="submit"(click)="editModeOff($event, user)" class="btn btn-success">{{"AddUser.Submit" | translate}}</button>
+    
+        </form>
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+<ng-template #noHeros>
+  <h5>{{"users.notUser" | translate}}</h5>
+</ng-template>

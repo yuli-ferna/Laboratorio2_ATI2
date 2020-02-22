@@ -4,6 +4,7 @@
         "Add": "Agregar",
         "Delete": "Eliminar",
         "Edit": "Editar",
+        "List": "Lista",
         "Spanish" : "Español",
         "English" : "Ingles",
         "Languages" : "Idiomas"
@@ -19,5 +20,9 @@
         "Birthday": "Cumpleaños",
         "BattleCry": "Grito de Batalla",
         "Submit": "Aceptar"
+    },
+    "users" : {
+        "notUser" : "No hay héroes registrados",
+        "Hero": "Héroe"
     }
 }

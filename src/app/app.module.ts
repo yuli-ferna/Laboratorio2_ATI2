@@ -12,7 +12,6 @@ import { UsersComponent } from './component/users/users.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { UserAddComponent } from './component/user-add/user-add.component';
 import { FormsModule } from '@angular/forms';
-import { materialize } from "materialize-css";
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
