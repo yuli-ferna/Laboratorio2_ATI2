@@ -19,7 +19,9 @@
         "ListPos": "Posicion en la Lista",
         "Birthday": "Cumpleaños",
         "BattleCry": "Grito de Batalla",
-        "Submit": "Aceptar"
+        "Submit": "Aceptar",
+        "isRequired": "es requerido/a",
+        "noNumber": "No debe tener números"
     },
     "users" : {
         "notUser" : "No hay héroes registrados",

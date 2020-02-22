@@ -15,11 +15,13 @@ export class UsersComponent implements OnInit {
   myRowData : string[];
   editMode : boolean;
   currentEditId : string;
-
-  constructor(private userService: UserService) { 
+  
+  constructor(private userService: UserService) 
+  {   
     this.columnsToDisplay=["Name", "AlterEgo"];
     this.editMode = false;
     this.currentEditId = '';
+
   }
 
   ngOnInit() {

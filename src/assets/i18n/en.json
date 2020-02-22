@@ -18,7 +18,8 @@
         "ListPos": "ListPos",
         "Birthday": "Birthday",
         "BattleCry": "BattleCry",
-        "Submit": "Submit"
+        "Submit": "Submit",
+        "isRequired": "is required"
     },
     "users" : {
         "notUser" : "No heroes registered",

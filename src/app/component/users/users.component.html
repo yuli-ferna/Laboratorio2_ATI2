@@ -19,36 +19,64 @@
           <div class="form-group">
             <label for="name">{{"AddUser.Name" | translate}}</label>
             <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="user.name" id="name" required>
+            <div *ngIf="name.touched && !name.valid">
+              <div *ngIf="name.errors.required">{{"AddUser.Name" | translate}} {{"AddUser.isRequired" | translate}}</div>
+
+            </div>
           </div>
     
           <div class="form-group">
             <label for="alterEgo">{{"AddUser.AlterEgo" | translate}}</label>
-            <input type="text" class="form-control" name="alterEgo" #alterEgo="ngModel" [(ngModel)]="user.alterEgo" id="alterEgo">
+            <input type="text" class="form-control" name="alterEgo" #alterEgo="ngModel" [(ngModel)]="user.alterEgo" id="alterEgo" required>
+            <div *ngIf="alterEgo.touched && !alterEgo.valid">
+              <div *ngIf="alterEgo.errors.required">{{"AddUser.AlterEgo" | translate}} {{"AddUser.isRequired" | translate}}</div>
+
+            </div>
           </div>
 
           <div class="form-group">
             <label for="alterEgo">{{"AddUser.Email" | translate}}</label>
-            <input type="email" class="form-control" name="email" #email="ngModel" [(ngModel)]="user.email" id="email">
+            <input type="email" class="form-control" name="email" #email="ngModel" [(ngModel)]="user.email" id="email" required>
+            <div *ngIf="email.touched && !email.valid">
+              <div *ngIf="email.errors.required">{{"AddUser.Email" | translate}} {{"AddUser.isRequired" | translate}}</div>
+
+            </div>
           </div>
 
           <div class="form-group">
             <label for="alterEgo">{{"AddUser.Phone" | translate}}</label>
-            <input type="text" class="form-control" name="phone" #phone="ngModel" [(ngModel)]="user.phone" id="phone">
+            <input type="text" class="form-control" name="phone" #phone="ngModel" [(ngModel)]="user.phone" id="phone" required>
+            <div *ngIf="phone.touched && !phone.valid">
+              <div *ngIf="phone.errors.required">{{"AddUser.Phone" | translate}} {{"AddUser.isRequired" | translate}}</div>
+
+            </div>
           </div>
 
           <div class="form-group">
             <label for="alterEgo">{{"AddUser.ListPos" | translate}}</label>
-            <input type="number" class="form-control" name="listPos" #listPos="ngModel" [(ngModel)]="user.listPos" id="listPos">
+            <input type="number" class="form-control" name="listPos" #listPos="ngModel" [(ngModel)]="user.listPos" id="listPos" required>
+            <div *ngIf="listPos.touched && !listPos.valid">
+              <div *ngIf="listPos.errors.required">{{"AddUser.ListPos" | translate}} {{"AddUser.isRequired" | translate}}</div>
+
+            </div>
           </div>
 
           <div class="form-group">
             <label for="alterEgo">{{"AddUser.Birthday" | translate}}</label>
-            <input type="date" class="form-control" name="birthday" #birthday="ngModel" [(ngModel)]="user.birthday" id="birthday">
+            <input type="date" class="form-control" name="birthday" #birthday="ngModel" [(ngModel)]="user.birthday" id="birthday" required>
+            <div *ngIf="birthday.touched && !birthday.valid">
+              <div *ngIf="birthday.errors.required">{{"AddUser.Birthday" | translate}} {{"AddUser.isRequired" | translate}}</div>
+
+            </div>
           </div>
 
           <div class="form-group">
             <label for="alterEgo">{{"AddUser.BattleCry" | translate}}</label>
-            <input type="text" class="form-control" name="heroPhrase" #heroPhrase="ngModel" [(ngModel)]="user.heroPhrase" id="heroPhrase">
+            <input type="text" class="form-control" name="heroPhrase" #heroPhrase="ngModel" [(ngModel)]="user.heroPhrase" id="heroPhrase" required>
+            <div *ngIf="heroPhrase.touched && !heroPhrase.valid">
+              <div *ngIf="heroPhrase.errors.required">{{"AddUser.BattleCry" | translate}} {{"AddUser.isRequired" | translate}}</div>
+              
+            </div>
           </div>
           <br><br>
           <button type="submit"(click)="editModeOff($event, user)" class="btn btn-success">{{"AddUser.Submit" | translate}}</button>
